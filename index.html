@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS loading dots</title>
+    <link rel="stylesheet" href="loading-dots.css">
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        h1,h2,h3,h4,h5 {
+            margin: 0;
+        }
+        section {
+            height: 100vmin;
+            
+        }
+        section .loading-dots {
+            font-size: 30px;
+        }
+        section h1 {
+            padding-top: 120px;
+            font-weight: 400;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .loading {
+            margin-bottom: 50px;
+        }
+        #s1 {
+            background-color: #89e051;
+            color: #fff;
+        }
+        .code {
+            background-color: rgba(255, 255, 255, 0.18);
+            width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            position: relative;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .gist .gist-file {
+            border: none;
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="s1">
+        <h1>CSS loading dots</h1>
+        <div class="loading">
+            <div class="loading-dots big-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="code">
+            <pre><code id="code" class="language-html"></code></pre>
+        </div>
+    </section>
+    <script type="x-html" id="html">
+    // for big rounded dots
+    <div class="loading-dots big-dots"><i></i><i></i><i></i></div>
+     
+    // for small square dots
+    <div class="loading-dots"><i></i><i></i><i></i></div>
+     
+    <style>
+
+      .loading-dots i {
+        background-color: $COLOR; // set dots color
+        width: $WIDTH; height: $HEIGHT; // set dots size
+      }
+      
+    </style>
+    </script>
+    <script>
+    var code = document.getElementById('html').innerHTML;
+    code = escapeHtml(code);
+    document.getElementById('code').innerHTML = code;
+    function escapeHtml(html) {
+      return String(html)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+    </script>
+</body>
+</html>

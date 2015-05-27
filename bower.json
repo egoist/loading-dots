@@ -1,0 +1,23 @@
+{
+  "name": "loading-dots",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AprilOrange/loading-dots",
+  "authors": [
+    "April Orange <aprilorange.net@icloud.com>"
+  ],
+  "description": "CSS loading dots",
+  "main": "loading-dots.css",
+  "keywords": [
+    "css",
+    "loading"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "index.html"
+  ]
+}
